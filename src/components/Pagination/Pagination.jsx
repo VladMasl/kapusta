@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {getAuthToken} from '../../redux/auth/AuthSelectors';
-import {getPeriod} from '../../utils/reportsApi';
 import icon from '../../images/icon.svg';
 import s from './Pagination.module.scss';
 
