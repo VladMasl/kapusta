@@ -4,7 +4,7 @@ import DatePicker from 'react-date-picker';
 import { useState } from 'react';
 
 import './MyDate.scss';
-import Calendar from './Calendar';
+import CalendarIcon from './CalendarIcon';
 
 export default function MyDate() {
   const [date, setDate] = useState(new Date());
@@ -18,7 +18,7 @@ export default function MyDate() {
           value={date}
           clearIcon=""
           format="dd.MM.yyyy"
-          calendarIcon={<Calendar />}
+          calendarIcon={<CalendarIcon />}
         />
       </form>
     </div>

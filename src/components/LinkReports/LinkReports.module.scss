@@ -1,0 +1,33 @@
+@import '../../sass/mixin';
+
+.btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--light-grey);
+  fill: var(--descr-gray);
+
+  background-color: transparent;
+  border: none;
+  transition: all var(--transition);
+  @include mq(tab) {
+    margin-bottom: 0;
+  }
+}
+.btn:hover,
+.btn:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.svg {
+  margin-left: 15px;
+  position: relative;
+  top: -4px;
+  fill: inherit;
+}

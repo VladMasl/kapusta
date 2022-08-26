@@ -77,4 +77,13 @@ const getAuthUser = createAsyncThunk('auth/getUser', async (_, { getState, rejec
   }
 });
 
-export { register, login, refresh, logOut, googleLogin, getAuthUser };
+const newBalance = createAsyncThunk('auth/newBalance', async (balance, { rejectWithValue }) => {
+  try {
+    const { data } = await api.updateBalance(balance);
+    return data;
+  } catch (error) {
+    return rejectWithValue(error.message);
+  }
+});
+
+export { register, login, refresh, logOut, googleLogin, getAuthUser, newBalance };

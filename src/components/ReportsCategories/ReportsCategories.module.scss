@@ -1,0 +1,19 @@
+.reportsCategories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px 0;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto Bold', sans-serif;
+  font-size: 14px;
+  line-height: 1.14;
+  p {
+    margin: 0 16px;
+  }
+}

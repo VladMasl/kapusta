@@ -47,7 +47,6 @@ const AuthForm = () => {
   };
   const handleSubmit = e => {
     e.preventDefault();
-    console.dir(e);
     let submitter = e.nativeEvent.submitter;
     if (submitter.name === 'login') {
       const errors = validate({ email, password });

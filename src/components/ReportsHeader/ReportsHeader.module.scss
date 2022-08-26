@@ -1,0 +1,38 @@
+.reportsHeder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 15px 0;
+  margin-bottom: 32px;
+}
+
+.total {
+  font-family: 'Roboto Bold', sans-serif;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #52555f;
+  p span {
+    margin-left: 15px;
+  }
+  &__expenses {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    &::after {
+      display: block;
+      content: '';
+      margin-left: 20px;
+      width: 0px;
+      height: 36px;
+      border-right: 1px solid #e0e5eb;
+    }
+  }
+  &__expenses span {
+    color: #e53935;
+  }
+  &__incomes span {
+    color: #407946;
+  }
+}

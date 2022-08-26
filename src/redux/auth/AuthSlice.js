@@ -1,5 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { register, login, refresh, logOut, googleLogin, getAuthUser } from './authOperations';
+import {
+  register,
+  login,
+  refresh,
+  logOut,
+  googleLogin,
+  getAuthUser,
+  newBalance,
+} from './authOperations';
 import * as api from '../../utils/api';
 
 const initialState = {
@@ -122,6 +130,19 @@ const slice = createSlice({
     [refresh.rejected]: (state, { payload }) => {
       state.isLoading = false;
       state.error = payload;
+    },
+    /* =================NEW BALANCE================= */
+    [newBalance.pending]: (state, { payload }) => {
+      state.isLoading = true;
+      state.error = null;
+    },
+    [newBalance.fulfilled]: (state, { payload }) => {
+      state.balance = payload.newBalance;
+      state.isLoading = false;
+    },
+    [newBalance.rejected]: (state, { payload }) => {
+      state.error = payload;
+      state.isLoading = false;
     },
   },
 });
