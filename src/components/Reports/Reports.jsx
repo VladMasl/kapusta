@@ -18,7 +18,6 @@ export default function Reports() {
   const [incomes, setIncomes] = useState({});
   const [expenses, setExpenses] = useState({});
   const [curCategory, setCurCategory] = useState(null);
-  const [pickedState, setPickedState] = useState('EXPENSES');
   const isMobile = useMediaQuery({
     query: '(min-width: 767px)',
   });
@@ -26,13 +25,10 @@ export default function Reports() {
   useEffect(() => {
     if (incomesResponse) setIncomes(incomesResponse);
     if (expensesResponse) setExpenses(expensesResponse);
-    console.log(incomesResponse);
-    console.log(expensesResponse);
-  }, [expensesResponse, incomesResponse, pickedState]);
+  }, [expensesResponse, incomesResponse]);
 
   return (
     <>
-      {/* {console.log(incomes)} */}
       <div>
         <ReportsHeader incomes={incomes} expenses={expenses} />
         <ReportsCategories
@@ -40,8 +36,6 @@ export default function Reports() {
           setCurCategory={setCurCategory}
           incomes={incomes}
           expenses={expenses}
-          setPickedState={setPickedState}
-          pickedState={pickedState}
         />
 
         {curCategory &&

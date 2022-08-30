@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './ReportsCategories.module.scss';
 import icon from '../../images/icon.svg';
 import ReportsCategoryList from 'components/ReportsCategoryList/ReportsCategoryList';
@@ -8,10 +8,8 @@ export default function ReportsCategories({
   expenses,
   curCategory,
   setCurCategory,
-  setPickedState,
-  pickedState,
 }) {
-  // const [pickedState, setPickedState] = useState('EXPENSES');
+  const [pickedState, setPickedState] = useState('EXPENSES');
   // const [changeState, setChangeState] = useState(true);
 
   const togglePickedState = () => {
