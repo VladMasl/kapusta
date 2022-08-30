@@ -10,14 +10,12 @@ export default function ReportsCategories({
   setCurCategory,
 }) {
   const [pickedState, setPickedState] = useState('EXPENSES');
-  // const [changeState, setChangeState] = useState(true);
 
   const togglePickedState = () => {
     setPickedState(prev => (prev === 'EXPENSES' ? 'INCOMES' : 'EXPENSES'));
   };
   const categories = pickedState === 'EXPENSES' ? expenses : incomes;
 
-  // console.log(changeState);
   return (
     <div className={s.backgroundCategoryList}>
       <div className={s.expenses}>
